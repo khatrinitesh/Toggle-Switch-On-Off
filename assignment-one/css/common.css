@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+ul,ol{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: right;
+}
+
+.clr::after{
+	clear: both;
+	display: table;
+	content: "";
+}
+
+.img_responsive{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+/* START */
+form .switch_block{
+	position: relative;
+	width: 200px;
+	height: 40px;
+	display: block;
+	background-color: #333;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+form .switch_block::after{
+	content:"No";
+	position: absolute;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background-color: red;
+	color: #fff;
+	border-radius: 50%;
+	-webkit-transition: left .2s linear;
+	-o-transition: left .2s linear;
+	transition: left .2s linear;
+}
+
+form  input{
+	display: none;
+}
+
+form input:checked + .switch_block{
+	background-color: cyan;
+}
+
+form input:checked + .switch_block::after{
+	left: 165px;
+	content: "Yes";
+	background-color: green;
+}
